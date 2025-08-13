@@ -1,6 +1,8 @@
 'use client';
 
-import Particles from '@tsparticles/react';
+import Particles, { initParticlesEngine } from '@tsparticles/react';
+import { useEffect, useState } from 'react';
+import { loadSlim } from '@tsparticles/slim';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -11,8 +13,17 @@ import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 
 export default function Home() {
+  const [particlesReady, setParticlesReady] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setParticlesReady(true));
+  }, []);
+
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden">
+      {particlesReady && (
       <Particles
         id="tsparticles"
         options={{
@@ -20,41 +31,40 @@ export default function Home() {
           fpsLimit: 120,
           interactivity: {
             events: {
-              onClick: { enable: true, mode: "push" },
-              onHover: { enable: true, mode: "repulse" },
+              onClick: { enable: true, mode: "repulse" },
+              onHover: {
+                enable: true,
+                mode: ["attract", "repulse"],
+                parallax: { enable: true, force: 10, smooth: 20 },
+              },
               resize: { enable: true },
             },
             modes: {
-              push: { quantity: 4 },
-              repulse: { distance: 200, duration: 0.4 },
+              push: { quantity: 2 },
+              repulse: { distance: 140, duration: 0.35 },
+              attract: { distance: 160, duration: 0.3 },
             },
           },
           particles: {
             color: { value: "#ffffff" },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 0.5,
-              width: 1,
-            },
+            links: { enable: false },
             move: {
               direction: "none",
               enable: true,
               outModes: { default: "bounce" },
-              random: false,
-              speed: 6,
+              random: true,
+              speed: 0.9,
               straight: false,
             },
-            number: { density: { enable: true }, value: 80 },
-            opacity: { value: 0.5 },
+            number: { density: { enable: true }, value: 260 },
+            opacity: { value: 0.22 },
             shape: { type: "circle" },
-            size: { value: { min: 1, max: 5 } },
+            size: { value: { min: 2, max: 4 } },
           },
           detectRetina: true,
         }}
         className="absolute inset-0 z-0"
-      />
+      />)}
       
       <Navbar />
       <div className="relative z-10 w-full">

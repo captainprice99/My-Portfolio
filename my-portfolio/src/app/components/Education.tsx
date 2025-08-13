@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
+import { FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaRocket } from 'react-icons/fa';
 
 const Education = () => {
   const ref = useRef(null);
@@ -113,6 +113,74 @@ const Education = () => {
                   <li>Campus Coders Crew</li>
                 </ul>
               </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Planned Master's (2027–2028) */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="relative group lg:col-span-2"
+          >
+            {/* Glow backdrop */}
+            <div aria-hidden className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-purple-600/40 via-pink-500/30 to-blue-500/40 blur opacity-40 group-hover:opacity-70 transition duration-300" />
+
+            <motion.div
+              whileHover={{ scale: 1.02, y: -4 }}
+              className="relative overflow-hidden rounded-3xl border border-purple-500/30 bg-slate-900/60 backdrop-blur-sm p-8 sm:p-10 max-w-3xl mx-auto"
+            >
+              {/* Corner ribbon */}
+              <div className="absolute -top-3 -right-3 rotate-12">
+                <span className="px-3 py-1 text-xs font-semibold tracking-wider rounded-md bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg">PLANNED</span>
+              </div>
+
+              {/* Accent stripes */}
+              <div aria-hidden className="pointer-events-none absolute -left-24 top-0 h-[140%] w-48 bg-gradient-to-b from-purple-500/20 to-transparent rotate-12" />
+              <div aria-hidden className="pointer-events-none absolute -right-24 bottom-0 h-[140%] w-48 bg-gradient-to-t from-pink-500/20 to-transparent -rotate-12" />
+
+              <div className="flex items-center mb-6 relative z-10">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center mr-4 ring-2 ring-purple-400/30">
+                  <FaRocket className="text-2xl text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">Planned M.S. in Computer Science</h3>
+                  <p className="text-pink-300 font-semibold text-lg">Graduate Studies Intent (2027 – 2028)</p>
+                </div>
+              </div>
+
+              <div className="space-y-4 text-gray-300 relative z-10">
+                <div className="flex items-center">
+                  <FaMapMarkerAlt className="text-purple-400 mr-3" />
+                  <span className="text-base sm:text-lg">Institution: TBD</span>
+                </div>
+                <div className="flex items-center">
+                  <FaCalendarAlt className="text-purple-400 mr-3" />
+                  <span className="text-base sm:text-lg">Aug 2027 – May 2028 (Tentative)</span>
+                </div>
+
+                <div className="pt-4">
+                  <h4 className="text-white font-semibold mb-3">Focus Interests:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {['AI Systems', 'Full‑Stack Engineering', 'Distributed Systems', 'Parallel Computing & Supercomputers', 'Robotics', 'ML Ops', 'Product & Leadership'].map((pill) => (
+                      <span key={pill} className="px-3 py-1 rounded-full text-sm border border-pink-500/30 bg-pink-600/15 text-pink-200">
+                        {pill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-2 text-sm text-gray-400">
+                  <p>Actively exploring programs, preparing research portfolio, and seeking mentorship to align specialization with long‑term impact.</p>
+                </div>
+              </div>
+
+              {/* Subtle pulse dot */}
+              <motion.div
+                className="absolute top-4 right-4 w-3 h-3 bg-pink-400 rounded-full"
+                animate={{ scale: [1, 1.25, 1], opacity: [0.9, 1, 0.9] }}
+                transition={{ repeat: Infinity, duration: 2 }}
+              />
             </motion.div>
           </motion.div>
         </div>

@@ -12,8 +12,8 @@ body {
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  /* margin: 0.35rem;
+  padding: 0.35rem; */
   box-sizing: border-box;
 }
 
@@ -236,4 +236,36 @@ a:focus {
 
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Rotating rainbow ring border for avatar */
+.rainbow-ring {
+  position: relative;
+}
+
+.rainbow-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px; /* full */
+  padding: 6px; /* ring thickness */
+  background: conic-gradient(
+    from 0deg,
+    #ff6b6b,
+    #f7b267,
+    #f7e967,
+    #63e6be,
+    #4dabf7,
+    #b197fc,
+    #ff6b6b
+  );
+  animation: spin-slow 6s linear infinite;
+  /* Show only the border area */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
 }

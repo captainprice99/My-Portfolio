@@ -13,18 +13,22 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8">
       <div className="text-center z-10 max-w-4xl mx-auto">
         <motion.div
-          initial={{ scale: 0, rotate: 180 }}
-          animate={{ scale: 1, rotate: 0 }}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative mb-8"
         >
-          <div className="w-48 h-48 mx-auto relative">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 animate-spin-slow p-1">
-              <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-                <div className="w-40 h-40 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white text-6xl font-bold">
-                  A
-                </div>
-              </div>
+          <div className="mx-auto relative w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] rainbow-ring">
+            <div className="absolute inset-[12px] rounded-full overflow-hidden bg-slate-900 z-10">
+              <Image
+                src="/profilepicture.png"
+                alt="Arnav Doshi profile picture"
+                fill
+                sizes="(max-width: 640px) 20rem, (max-width: 768px) 24rem, 28rem"
+                className="object-cover"
+                style={{ objectPosition: '50% 50%', transform: 'translateX(-1.15%)' }}
+                priority
+              />
             </div>
           </div>
         </motion.div>
@@ -46,7 +50,7 @@ const Hero = () => {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8"
         >
-          Computer Science Student @ UMD
+          Software Engineer, Problem Solver, and Fitness Enthusiast
         </motion.h2>
 
         <motion.p
