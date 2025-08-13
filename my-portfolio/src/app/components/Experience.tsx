@@ -11,7 +11,7 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: "Software Engineer Intern",
+      title: "Software Engineer Co-Op",
       company: "Calero",
       location: "Rochester, NY",
       period: "Sep 2025 – Dec 2025",

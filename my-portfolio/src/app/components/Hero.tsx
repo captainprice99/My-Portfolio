@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import RotatingText from './RotatingText';
 import Image from 'next/image';
 
 const Hero = () => {
@@ -50,7 +51,17 @@ const Hero = () => {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8"
         >
-          Software Engineer, Entrepreneur, and Fitness Enthusiast
+          <RotatingText
+            items={[
+              'Software Engineer',
+              'Entrepreneur',
+              'Problem Solver',
+              'Team Player',
+              'Amateur Racecar Driver',
+              'Fitness Enthusiast'
+            ]}
+            interval={1800}
+          />
         </motion.h2>
 
         <motion.p

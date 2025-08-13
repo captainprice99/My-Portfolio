@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { 
   FaReact, FaNodeJs, FaPython, FaJsSquare, FaHtml5, FaCss3Alt,
   FaGitAlt, FaDocker, FaAws, FaJava, FaMicrosoft 
@@ -19,6 +19,7 @@ import { TbBrandCSharp } from 'react-icons/tb';
 const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [showMore, setShowMore] = useState(false);
 
   const skills = [
     // Languages
@@ -80,7 +81,7 @@ const Skills = () => {
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 max-w-6xl mx-auto">
-          {skills.map((skill, index) => (
+          {(showMore ? skills : skills.slice(0, 18)).map((skill, index) => (
             <motion.div
               key={skill.name}
               initial={{ opacity: 0, y: 50, scale: 0.8 }}
@@ -125,6 +126,18 @@ const Skills = () => {
               </motion.div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowMore((v) => !v)}
+            className="px-4 py-2 rounded-md border border-slate-600 bg-slate-800/50 text-gray-200 hover:bg-slate-700/60 hover:border-slate-500 transition-colors"
+            aria-expanded={showMore}
+            aria-controls="skills-grid"
+          >
+            {showMore ? 'Show less' : 'Show more'}
+          </button>
         </div>
 
         <motion.div
