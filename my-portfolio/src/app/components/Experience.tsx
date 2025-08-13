@@ -11,30 +11,63 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: "Software Engineering Intern",
-      company: "Coming Soon",
-      location: "TBD",
-      period: "Summer 2025",
-      description: "Exciting opportunities ahead! Currently seeking internship positions to apply my skills in real-world projects and contribute to innovative solutions.",
-      skills: ["React", "Node.js", "Python", "AWS"],
-      isPlaceholder: true
+      title: "DigITal Accelerator Development Program Intern – Enterprise IT",
+      company: "Bristol Myers Squibb (Semantic Data Products Team)",
+      location: "Lawrenceville, NJ",
+      period: "Jun 2025 – Aug 2025",
+      description:
+        "Built a clinical trial analytics dashboard (20M+ entries, 30+ SEND datasets) using Spotfire, AWS Athena, PostgreSQL, and Python; shipped an automated data access tool with JS SDKs and custom MCP servers integrated with GPT‑4.1; owned unit tests and LLM prompt eval in SDLC using AWS Lambda/CloudWatch and pytest.",
+      skills: ["Spotfire", "AWS Athena", "PostgreSQL", "Python", "AWS Lambda", "CloudWatch", "pytest", "GPT-4.1", "MCP"],
+      isPlaceholder: false
     },
     {
-      title: "Research Assistant",
-      company: "University of Maryland",
+      title: "Software Engineer Lead",
+      company: "Campus Coders Crew",
       location: "College Park, MD",
-      period: "Fall 2024 - Present",
-      description: "Working on cutting-edge research projects in computer science, contributing to academic publications and exploring new technologies.",
-      skills: ["Python", "Machine Learning", "Data Analysis", "Research"],
-      isPlaceholder: true
+      period: "Feb 2025 – Present",
+      description:
+        "Led full‑stack builds for 10+ student orgs supporting 8,000+ students. Coordinated agile workflows for 70+ developers across 9 teams; standardized PRs and lifecycles. Delivered MERN apps on AWS/MongoDB Atlas with resilient REST APIs.",
+      skills: ["React", "Node.js", "Express", "MongoDB Atlas", "AWS", "REST APIs", "Agile"],
+      isPlaceholder: false
     },
     {
-      title: "Full Stack Developer",
-      company: "Personal Projects",
-      location: "Remote",
-      period: "2023 - Present",
-      description: "Developing various web applications and contributing to open-source projects. Building modern, responsive applications with the latest technologies.",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      title: "Data Science / Machine Learning Intern",
+      company: "Sensable Inc.",
+      location: "Baltimore, MD",
+      period: "Jun 2024 – Aug 2024",
+      description:
+        "Architected CI/CD with Jenkins + Kubernetes for mobile app deployments; designed CNN/LSTM models for physiological signals (+26% accuracy over baseline); optimized MySQL schemas to cut query time 30% and 2x throughput.",
+      skills: ["Jenkins", "Kubernetes", "CNN", "LSTM", "Python", "MySQL", "Data Engineering"],
+      isPlaceholder: false
+    },
+    {
+      title: "Undergraduate Data Science Researcher",
+      company: "Bill Fagan Lab",
+      location: "College Park, MD",
+      period: "Jan 2024 – May 2024",
+      description:
+        "Analyzed antelope heart‑rate datasets in Python/Pandas; detected and mitigated biologger errors to improve data accuracy by 32%. Built multithreaded NumPy parsers (+125% parsing speed). Collaborated with Dr. William Fagan using Jupyter for analysis/visualization.",
+      skills: ["Python", "Pandas", "NumPy", "Multithreading", "Jupyter"],
+      isPlaceholder: false
+    },
+    {
+      title: "Teaching Assistant",
+      company: "University of Maryland Department of Computer Science",
+      location: "College Park, MD",
+      period: "Fall 2024",
+      description:
+        "Mentored students in office hours; evaluated exams/coursework with detailed feedback; proctored quizzes/exams while upholding academic integrity.",
+      skills: ["Mentorship", "Teaching", "Assessment", "Communication"],
+      isPlaceholder: false
+    },
+    {
+      title: "Programming Instructor (Volunteer)",
+      company: "T20 Prep",
+      location: "Edison, NJ (Remote)",
+      period: "Oct 2023 – Dec 2023; Aug 2024 – Present",
+      description:
+        "Taught introductory Java to high school students; guided project development and exam preparation in a remote setting.",
+      skills: ["Java", "Instruction", "Curriculum", "Remote Teaching"],
       isPlaceholder: false
     }
   ];

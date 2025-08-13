@@ -36,7 +36,7 @@ const Hero = () => {
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
         >
           <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Your Name
+            Arnav Doshi
           </span>
         </motion.h1>
 
@@ -46,7 +46,7 @@ const Hero = () => {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8"
         >
-          Aspiring Software Engineer
+          Computer Science Student @ UMD
         </motion.h2>
 
         <motion.p

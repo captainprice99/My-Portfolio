@@ -32,22 +32,15 @@ const About = () => {
             className="space-y-8"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              Hello! I'm a passionate computer science student at the University of Maryland, 
-              driven by curiosity and a love for creating innovative solutions. My journey in 
-              technology began with a simple "Hello, World!" and has evolved into a deep 
-              appreciation for the art and science of software development.
-            </p>
-            
-            <p className="text-lg text-gray-300 leading-relaxed">
-              I thrive on challenges that push the boundaries of what's possible, whether it's 
-              building responsive web applications, diving into machine learning algorithms, or 
-              exploring the latest frameworks and technologies. Every project is an opportunity 
-              to learn, grow, and make a meaningful impact.
+              I'm Arnav Doshi, a Computer Science student at the University of Maryland (Minor in General Business),
+              GPA 3.9/4.0, Dean’s List 4x, and CS Honors. I love turning complex problems into clean, high-impact
+              software across full‑stack, ML/AI, and cloud.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to 
-              open-source projects, or brainstorming the next big idea that could change the world.
+              Experience includes Bristol Myers Squibb (Enterprise IT, Semantic Data Products), Software Engineer Lead at
+              Campus Coders Crew (supporting 8,000+ students), and a Data Science/ML Internship at Sensable Inc. I work with
+              React/Next.js, TypeScript, Python, Java, Node/Express, Docker, and AWS/GCP/Azure to deliver scalable products.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-8">

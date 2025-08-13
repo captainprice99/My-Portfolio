@@ -17,18 +17,28 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skills = [
-    { name: 'React', icon: FaReact, color: 'text-blue-400', delay: 0.1 },
-    { name: 'Next.js', icon: SiNextdotjs, color: 'text-white', delay: 0.2 },
-    { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500', delay: 0.3 },
-    { name: 'JavaScript', icon: FaJsSquare, color: 'text-yellow-400', delay: 0.4 },
-    { name: 'Python', icon: FaPython, color: 'text-green-400', delay: 0.5 },
-    { name: 'Node.js', icon: FaNodeJs, color: 'text-green-500', delay: 0.6 },
-    { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400', delay: 0.7 },
-    { name: 'HTML5', icon: FaHtml5, color: 'text-orange-500', delay: 0.8 },
-    { name: 'CSS3', icon: FaCss3Alt, color: 'text-blue-500', delay: 0.9 },
-    { name: 'MongoDB', icon: SiMongodb, color: 'text-green-500', delay: 1.0 },
-    { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400', delay: 1.1 },
-    { name: 'Git', icon: FaGitAlt, color: 'text-orange-600', delay: 1.2 },
+    // Languages
+    { name: 'JavaScript', icon: FaJsSquare, color: 'text-yellow-400', delay: 0.1 },
+    { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500', delay: 0.15 },
+    { name: 'Python', icon: FaPython, color: 'text-green-400', delay: 0.2 },
+    // Frontend
+    { name: 'React', icon: FaReact, color: 'text-blue-400', delay: 0.25 },
+    { name: 'Next.js', icon: SiNextdotjs, color: 'text-white', delay: 0.3 },
+    { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400', delay: 0.35 },
+    { name: 'HTML5', icon: FaHtml5, color: 'text-orange-500', delay: 0.4 },
+    { name: 'CSS3', icon: FaCss3Alt, color: 'text-blue-500', delay: 0.45 },
+    // Backend & Databases
+    { name: 'Node.js', icon: FaNodeJs, color: 'text-green-500', delay: 0.5 },
+    { name: 'Express.js', icon: SiExpress, color: 'text-white', delay: 0.55 },
+    { name: 'MongoDB', icon: SiMongodb, color: 'text-green-500', delay: 0.6 },
+    { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400', delay: 0.65 },
+    // DevOps & Cloud
+    { name: 'Git', icon: FaGitAlt, color: 'text-orange-600', delay: 0.7 },
+    { name: 'Docker', icon: FaDocker, color: 'text-sky-400', delay: 0.75 },
+    { name: 'AWS', icon: FaAws, color: 'text-amber-300', delay: 0.8 },
+    { name: 'Firebase', icon: SiFirebase, color: 'text-amber-400', delay: 0.85 },
+    { name: 'Vercel', icon: SiVercel, color: 'text-white', delay: 0.9 },
+    { name: 'MySQL', icon: FaDatabase, color: 'text-teal-300', delay: 0.95 },
   ];
 
   return (

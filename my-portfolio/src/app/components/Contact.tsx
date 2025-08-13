@@ -67,7 +67,7 @@ const Contact = () => {
     {
       name: 'Email',
       icon: FaEnvelope,
-      url: 'mailto:your.email@example.com',
+      url: 'mailto:adoshi14@terpmail.umd.edu',
       color: 'hover:text-red-400'
     }
   ];
@@ -203,7 +203,17 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-300">Email</p>
-                    <p className="text-white font-semibold">your.email@example.com</p>
+                    <p className="text-white font-semibold">adoshi14@terpmail.umd.edu</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+                    <FaPhone className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-gray-300">Phone</p>
+                    <p className="text-white font-semibold">(732) 824-2022</p>
                   </div>
                 </div>
 

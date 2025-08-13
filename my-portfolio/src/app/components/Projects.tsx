@@ -12,39 +12,63 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with modern UI, secure payments, and admin dashboard. Built with React, Node.js, and MongoDB.",
+      title: "Personal Portfolio Website",
+      description:
+        "This site: a vibrant single‑page portfolio built with Next.js 15, Tailwind CSS, Framer Motion animations, and tsparticles background. Smooth scroll navigation, responsive layout, EmailJS contact form, and deployed on Vercel.",
       image: "/api/placeholder/400/250",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "tsparticles", "EmailJS", "Vercel"],
       github: "https://github.com",
-      demo: "https://demo.com",
+      demo: "#",
       featured: true
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      title: "News Article Logical Fallacy Detector AI Agent",
+      description:
+        "Python-based agent using LangChain + RAG to analyze articles for logical fallacies. Pulls live news via SerperAPI, enriches context with Wikipedia scraping, and runs a two‑stage LLM chain to produce fallacy and counterfactual reports.",
       image: "/api/placeholder/400/250",
-      technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Socket.io"],
+      technologies: ["Python", "LangChain", "RAG", "SerperAPI", "BeautifulSoup", "GPT-4.1-mini"],
       github: "https://github.com",
-      demo: "https://demo.com",
+      demo: "#",
       featured: true
     },
     {
-      title: "Weather Dashboard",
-      description: "A responsive weather application with location-based forecasts, interactive maps, and beautiful data visualizations.",
+      title: "VoyageWatch – Sea of Thieves Event Tracker",
+      description:
+        "Multiplayer web app for posting and editing in‑game events on a live Leaflet map. Real‑time updates with Socket.IO, Spring Boot backend with REST + WebSockets, MongoDB storage, Redis TTL caching, and Dockerized services.",
       image: "/api/placeholder/400/250",
-      technologies: ["React", "Chart.js", "OpenWeather API", "CSS3"],
+      technologies: ["React", "TypeScript", "Leaflet.js", "Socket.IO", "Spring Boot", "MongoDB", "Redis", "Docker"],
       github: "https://github.com",
-      demo: "https://demo.com",
+      demo: "#",
+      featured: true
+    },
+    {
+      title: "Star Wars: Dataverse",
+      description:
+        "Star Wars encyclopedia and battle simulator. SWAPI-powered searches, live character duels with Socket.IO, animated with Framer Motion, secure auth via Firebase, state with Zustand, routing via React Router, and Material UI styling.",
+      image: "/api/placeholder/400/250",
+      technologies: ["React", "Socket.IO", "Framer Motion", "SWAPI", "Firebase", "Zustand", "React Router", "Material UI"],
+      github: "https://github.com",
+      demo: "#",
       featured: false
     },
     {
-      title: "Portfolio Website",
-      description: "This very portfolio website! A modern, responsive site with smooth animations and interactive particle background.",
+      title: "Functional Prosthetic Hand with Real-Time Feedback",
+      description:
+        "Built a functional prosthetic hand prototype with real‑time gesture recognition (Python, OpenCV). Implemented precise motor control in C++ and TensorFlow models to adapt grip strength from user feedback. Frontend control interface in React + TypeScript; deployed services on AWS EC2 with Docker; styled UI with Bootstrap and used Jupyter for data analysis/model tuning.",
       image: "/api/placeholder/400/250",
-      technologies: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
+      technologies: ["Python", "OpenCV", "C++", "TensorFlow", "React", "TypeScript", "AWS EC2", "Docker", "Bootstrap", "Jupyter"],
       github: "https://github.com",
-      demo: "https://demo.com",
+      demo: "#",
+      featured: false
+    },
+    {
+      title: "SonicDB – Music Industry Insights Engine",
+      description:
+        "Designed a relational schema in PostgreSQL for artists/albums/genres. Integrated Kaggle + web‑scraped datasets; developed optimized SQL to extract insights on performance, trends, and sales. Used pgAdmin for administration, modeling, and query optimization to ensure consistency and performance.",
+      image: "/api/placeholder/400/250",
+      technologies: ["PostgreSQL", "SQL", "pgAdmin", "Data Modeling", "ETL", "Web Scraping"],
+      github: "https://github.com",
+      demo: "#",
       featured: false
     }
   ];
