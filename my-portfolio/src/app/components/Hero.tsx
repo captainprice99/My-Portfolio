@@ -21,12 +21,12 @@ const Hero = () => {
           <div className="mx-auto relative w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] rainbow-ring">
             <div className="absolute inset-[12px] rounded-full overflow-hidden bg-slate-900 z-10">
               <Image
-                src="/profilepicture.png"
+                src="/IMG_7763.jpeg"
                 alt="Arnav Doshi profile picture"
                 fill
                 sizes="(max-width: 640px) 20rem, (max-width: 768px) 24rem, 28rem"
                 className="object-cover"
-                style={{ objectPosition: '50% 50%', transform: 'translateX(-1.15%)' }}
+                style={{ objectPosition: '50% 50%', transform: 'translateX(-0.1%)' }}
                 priority
               />
             </div>
@@ -50,7 +50,7 @@ const Hero = () => {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8"
         >
-          Software Engineer, Problem Solver, and Fitness Enthusiast
+          Software Engineer, Entrepreneur, and Fitness Enthusiast
         </motion.h2>
 
         <motion.p

@@ -162,7 +162,7 @@ const Education = () => {
                 <div className="pt-4">
                   <h4 className="text-white font-semibold mb-3">Focus Interests:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['AI Systems', 'Full‑Stack Engineering', 'Distributed Systems', 'Parallel Computing & Supercomputers', 'Robotics', 'ML Ops', 'Product & Leadership'].map((pill) => (
+                    {['Cloud Computing', 'Full‑Stack Engineering', 'Distributed Systems', 'Parallel Computing & Supercomputers', 'Robotics', 'ML Ops', 'Product & Leadership'].map((pill) => (
                       <span key={pill} className="px-3 py-1 rounded-full text-sm border border-pink-500/30 bg-pink-600/15 text-pink-200">
                         {pill}
                       </span>

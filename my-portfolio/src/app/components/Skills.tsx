@@ -4,13 +4,17 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { 
-  FaReact, FaNodeJs, FaPython, FaJsSquare, FaHtml5, FaCss3Alt, 
-  FaGitAlt, FaDocker, FaAws, FaDatabase 
+  FaReact, FaNodeJs, FaPython, FaJsSquare, FaHtml5, FaCss3Alt,
+  FaGitAlt, FaDocker, FaAws, FaJava, FaMicrosoft 
 } from 'react-icons/fa';
 import { 
-  SiNextdotjs, SiTailwindcss, SiTypescript, SiMongodb, 
-  SiPostgresql, SiExpress, SiFirebase, SiVercel 
+  SiNextdotjs, SiTailwindcss, SiTypescript, SiMongodb,
+  SiPostgresql, SiExpress,
+  SiC, SiCplusplus, SiR, SiDotnet, SiOcaml,
+  SiDjango, SiNumpy, SiPandas, SiGraphql,
+  SiScikitlearn, SiJenkins, SiMysql
 } from 'react-icons/si';
+import { TbBrandCSharp } from 'react-icons/tb';
 
 const Skills = () => {
   const ref = useRef(null);
@@ -21,6 +25,12 @@ const Skills = () => {
     { name: 'JavaScript', icon: FaJsSquare, color: 'text-yellow-400', delay: 0.1 },
     { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500', delay: 0.15 },
     { name: 'Python', icon: FaPython, color: 'text-green-400', delay: 0.2 },
+    { name: 'Java', icon: FaJava, color: 'text-red-500', delay: 0.22 },
+    { name: 'C', icon: SiC, color: 'text-blue-500', delay: 0.24 },
+    { name: 'C++', icon: SiCplusplus, color: 'text-blue-400', delay: 0.26 },
+    { name: 'C#', icon: TbBrandCSharp, color: 'text-purple-400', delay: 0.28 },
+    { name: 'R', icon: SiR, color: 'text-sky-500', delay: 0.3 },
+    { name: 'OCaml', icon: SiOcaml, color: 'text-orange-400', delay: 0.32 },
     // Frontend
     { name: 'React', icon: FaReact, color: 'text-blue-400', delay: 0.25 },
     { name: 'Next.js', icon: SiNextdotjs, color: 'text-white', delay: 0.3 },
@@ -32,13 +42,22 @@ const Skills = () => {
     { name: 'Express.js', icon: SiExpress, color: 'text-white', delay: 0.55 },
     { name: 'MongoDB', icon: SiMongodb, color: 'text-green-500', delay: 0.6 },
     { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400', delay: 0.65 },
+    { name: 'MySQL', icon: SiMysql, color: 'text-teal-300', delay: 0.66 },
+    // More Languages / Runtimes
+    { name: '.NET', icon: SiDotnet, color: 'text-indigo-400', delay: 0.67 },
+    // Data / ML Frameworks
+    { name: 'NumPy', icon: SiNumpy, color: 'text-blue-300', delay: 0.76 },
+    { name: 'Pandas', icon: SiPandas, color: 'text-emerald-300', delay: 0.78 },
+    { name: 'scikit-learn', icon: SiScikitlearn, color: 'text-orange-300', delay: 0.82 },
+    { name: 'Django', icon: SiDjango, color: 'text-green-400', delay: 0.84 },
+    { name: 'GraphQL', icon: SiGraphql, color: 'text-pink-400', delay: 0.88 },
     // DevOps & Cloud
     { name: 'Git', icon: FaGitAlt, color: 'text-orange-600', delay: 0.7 },
     { name: 'Docker', icon: FaDocker, color: 'text-sky-400', delay: 0.75 },
     { name: 'AWS', icon: FaAws, color: 'text-amber-300', delay: 0.8 },
-    { name: 'Firebase', icon: SiFirebase, color: 'text-amber-400', delay: 0.85 },
-    { name: 'Vercel', icon: SiVercel, color: 'text-white', delay: 0.9 },
-    { name: 'MySQL', icon: FaDatabase, color: 'text-teal-300', delay: 0.95 },
+    { name: 'Azure', icon: FaMicrosoft, color: 'text-blue-400', delay: 0.84 },
+    // Developer Tools
+    { name: 'Jenkins', icon: SiJenkins, color: 'text-red-400', delay: 1.0 },
   ];
 
   return (

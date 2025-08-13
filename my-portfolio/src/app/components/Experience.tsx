@@ -11,13 +11,23 @@ const Experience = () => {
 
   const experiences = [
     {
+      title: "Software Engineer Intern",
+      company: "Calero",
+      location: "Rochester, NY",
+      period: "Sep 2025 – Dec 2025",
+      description:
+        "Joining Calero this fall to build full‑stack features: C#/.NET services on the backend, React on the frontend, and Azure cloud services. Contributing within agile ceremonies and shipping production‑grade code.",
+      skills: ["C#", ".NET", "React", "Azure", "Agile"],
+      isPlaceholder: false
+    },
+    {
       title: "DigITal Accelerator Development Program Intern – Enterprise IT",
-      company: "Bristol Myers Squibb (Semantic Data Products Team)",
+      company: "Bristol Myers Squibb (Translational Medicine & Semantic Data Products Team)",
       location: "Lawrenceville, NJ",
       period: "Jun 2025 – Aug 2025",
       description:
         "Built a clinical trial analytics dashboard (20M+ entries, 30+ SEND datasets) using Spotfire, AWS Athena, PostgreSQL, and Python; shipped an automated data access tool with JS SDKs and custom MCP servers integrated with GPT‑4.1; owned unit tests and LLM prompt eval in SDLC using AWS Lambda/CloudWatch and pytest.",
-      skills: ["Spotfire", "AWS Athena", "PostgreSQL", "Python", "AWS Lambda", "CloudWatch", "pytest", "GPT-4.1", "MCP"],
+      skills: ["Spotfire", "AWS Athena", "PostgreSQL", "Python", "AWS Lambda", "CloudWatch", "Pytest", "GPT-4.1", "MCP"],
       isPlaceholder: false
     },
     {
@@ -28,6 +38,16 @@ const Experience = () => {
       description:
         "Led full‑stack builds for 10+ student orgs supporting 8,000+ students. Coordinated agile workflows for 70+ developers across 9 teams; standardized PRs and lifecycles. Delivered MERN apps on AWS/MongoDB Atlas with resilient REST APIs.",
       skills: ["React", "Node.js", "Express", "MongoDB Atlas", "AWS", "REST APIs", "Agile"],
+      isPlaceholder: false
+    },
+    {
+      title: "Teaching Assistant",
+      company: "University of Maryland Department of Computer Science",
+      location: "College Park, MD",
+      period: "Aug 2024 – Dec 2024",
+      description:
+        "Mentored students in office hours; evaluated exams/coursework with detailed feedback; proctored quizzes/exams while upholding academic integrity.",
+      skills: ["Mentorship", "Teaching", "Assessment", "Communication"],
       isPlaceholder: false
     },
     {
@@ -48,16 +68,6 @@ const Experience = () => {
       description:
         "Analyzed antelope heart‑rate datasets in Python/Pandas; detected and mitigated biologger errors to improve data accuracy by 32%. Built multithreaded NumPy parsers (+125% parsing speed). Collaborated with Dr. William Fagan using Jupyter for analysis/visualization.",
       skills: ["Python", "Pandas", "NumPy", "Multithreading", "Jupyter"],
-      isPlaceholder: false
-    },
-    {
-      title: "Teaching Assistant",
-      company: "University of Maryland Department of Computer Science",
-      location: "College Park, MD",
-      period: "Fall 2024",
-      description:
-        "Mentored students in office hours; evaluated exams/coursework with detailed feedback; proctored quizzes/exams while upholding academic integrity.",
-      skills: ["Mentorship", "Teaching", "Assessment", "Communication"],
       isPlaceholder: false
     },
     {
