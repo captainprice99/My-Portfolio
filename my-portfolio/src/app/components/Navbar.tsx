@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,9 +43,9 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaGithub className="text-xl" />, href: 'https://github.com', label: 'GitHub' },
-    { icon: <FaLinkedin className="text-xl" />, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: <FaEnvelope className="text-xl" />, href: 'mailto:your.email@example.com', label: 'Email' },
+    { icon: <FaGithub className="text-xl" />, href: 'https://github.com/captainprice99', label: 'GitHub' },
+    { icon: <FaLinkedin className="text-xl" />, href: 'https://www.linkedin.com/in/arnav-doshi-13a37a2a6/', label: 'LinkedIn' },
+    { icon: <FaEnvelope className="text-xl" />, href: 'mailto:adoshi14@terpmail.umd.edu', label: 'Email' },
   ];
 
   return (
@@ -62,14 +63,24 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="flex items-center"
           >
-            <Link 
-              href="#" 
-              className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent hover:from-purple-300 hover:to-pink-300 transition-all duration-300"
-            >
-              Portfolio
+            <Link href="#" className="flex items-center gap-3 group">
+              <span className="relative block w-12 h-12 rounded-md overflow-hidden ring-1 ring-white/10 group-hover:ring-purple-400/40 transition-all duration-300 bg-transparent">
+                <Image
+                  src="/Logo.png"
+                  alt="Arnav Logo"
+                  fill
+                  sizes="48px"
+                  className="object-contain invert contrast-125 brightness-110"
+                  priority
+                />
+              </span>
+              <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent hover:from-purple-300 hover:to-pink-300 transition-all duration-300">
+                Arnav's Portfolio
+              </span>
             </Link>
           </motion.div>
 

@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -29,18 +28,18 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Replace with your EmailJS service ID, template ID, and user ID
-      await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
-        },
-        'YOUR_USER_ID'
-      );
-      
+        })
+      });
+
+      if (!res.ok) throw new Error('Request failed');
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
@@ -55,13 +54,13 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: FaGithub,
-      url: 'https://github.com',
+      url: 'https://github.com/captainprice99',
       color: 'hover:text-gray-400'
     },
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://linkedin.com',
+      url: 'https://www.linkedin.com/in/arnav-doshi-13a37a2a6/',
       color: 'hover:text-blue-400'
     },
     {
