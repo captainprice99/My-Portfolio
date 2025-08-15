@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Image from 'next/image';
 
 const About = () => {
   const ref = useRef(null);
@@ -72,12 +73,15 @@ const About = () => {
             className="relative"
           >
             <div className="relative z-10 bg-gradient-to-br from-purple-600/10 to-pink-600/10 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8">
-              <div className="w-full h-80 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-6xl mb-4">🚀</div>
-                  <p className="text-xl font-semibold">Ready to Launch</p>
-                  <p className="text-sm opacity-80">Into the Future of Tech</p>
-                </div>
+              <div className="relative w-full h-80 rounded-xl overflow-hidden">
+                <Image
+                  src="/wwebpic.jpg"
+                  alt="Arnav Doshi"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
             

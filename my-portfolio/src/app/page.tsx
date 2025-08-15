@@ -34,15 +34,14 @@ export default function Home() {
               onClick: { enable: true, mode: "repulse" },
               onHover: {
                 enable: true,
-                mode: ["attract", "repulse"],
-                parallax: { enable: true, force: 10, smooth: 20 },
+                mode: "repulse",
+                parallax: { enable: false },
               },
               resize: { enable: true },
             },
             modes: {
               push: { quantity: 2 },
               repulse: { distance: 140, duration: 0.35 },
-              attract: { distance: 160, duration: 0.3 },
             },
           },
           particles: {

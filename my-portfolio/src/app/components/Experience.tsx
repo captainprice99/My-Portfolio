@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Experience = () => {
   const ref = useRef(null);
@@ -139,12 +140,40 @@ const Experience = () => {
                   >
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center">
-                        <div className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${
-                          exp.isPlaceholder 
-                            ? 'bg-gradient-to-br from-purple-600/50 to-pink-600/50' 
-                            : 'bg-gradient-to-br from-purple-600 to-pink-600'
-                        }`}>
-                          <FaBriefcase className="text-white text-lg" />
+                        <div className="w-12 h-12 mr-4">
+                          {exp.company.includes('Bristol Myers Squibb') ? (
+                            <span className="w-12 h-12 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white/90 flex items-center justify-center">
+                              <Image src="/bmslogo.png" alt="Bristol Myers Squibb" width={48} height={48} className="object-contain w-full h-full p-1" />
+                            </span>
+                          ) : exp.company.includes('Calero') ? (
+                            <span className="w-12 h-12 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white/90 flex items-center justify-center">
+                              <Image src="/clogo.svg" alt="Calero" width={48} height={48} className="object-contain w-full h-full p-1" />
+                            </span>
+                          ) : exp.company.includes('Campus Coders Crew') ? (
+                            <span className="w-12 h-12 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white/90 flex items-center justify-center">
+                              <Image src="/ccclogo.jpg" alt="Campus Coders Crew" width={48} height={48} className="object-contain w-full h-full p-1" />
+                            </span>
+                          ) : exp.company.includes('University of Maryland Department of Computer Science') ? (
+                            <span className="w-12 h-12 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white/90 flex items-center justify-center">
+                              <Image src="/umcslogo.jpg" alt="UMD Computer Science" width={48} height={48} className="object-contain w-full h-full p-1" />
+                            </span>
+                          ) : exp.company.includes('Sensable') ? (
+                            <span className="w-12 h-12 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white/90 flex items-center justify-center">
+                              <Image src="/senslogo.jpg" alt="Sensable Inc." width={48} height={48} className="object-contain w-full h-full p-1" />
+                            </span>
+                          ) : exp.company.includes('Bill Fagan Lab') ? (
+                            <span className="w-12 h-12 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white/90 flex items-center justify-center">
+                              <Image src="/scilogo.jpg" alt="Research Lab" width={48} height={48} className="object-contain w-full h-full p-1" />
+                            </span>
+                          ) : (
+                            <span className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                              exp.isPlaceholder 
+                                ? 'bg-gradient-to-br from-purple-600/50 to-pink-600/50' 
+                                : 'bg-gradient-to-br from-purple-600 to-pink-600'
+                            }`}>
+                              <FaBriefcase className="text-white text-lg" />
+                            </span>
+                          )}
                         </div>
                         <div>
                           <h3 className="text-lg sm:text-xl font-bold text-white">{exp.title}</h3>

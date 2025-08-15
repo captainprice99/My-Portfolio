@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaRocket } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Education = () => {
   const ref = useRef(null);
@@ -38,8 +39,15 @@ const Education = () => {
           >
             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 sm:p-10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 h-full">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mr-4">
-                  <FaGraduationCap className="text-2xl text-white" />
+                <div className="w-16 h-16 rounded-xl overflow-hidden mr-4 ring-1 ring-white/10 bg-white/90">
+                  <Image
+                    src="/mlogo.png"
+                    alt="University of Maryland logo"
+                    width={64}
+                    height={64}
+                    className="object-contain w-full h-full p-1"
+                    priority
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white">B.S. in Computer Science</h3>
@@ -192,7 +200,7 @@ const Education = () => {
           className="text-center mt-12"
         >
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Education is not just about degrees—it's about continuous growth, curiosity, and the pursuit of knowledge that drives innovation.
+            My academic career is far from over, and I'm excited for what lies ahead!
           </p>
         </motion.div>
       </div>
