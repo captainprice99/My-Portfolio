@@ -33,7 +33,7 @@ const Projects = () => {
       title: "VoyageWatch – Sea of Thieves Event Tracker",
       description:
         "Multiplayer web app for posting and editing in‑game events on a live Leaflet map. Real‑time updates with Socket.IO, Spring Boot backend with REST + WebSockets, MongoDB storage, Redis TTL caching, and Dockerized services.",
-      image: "/SOT_Use.jpg",
+      image: "/SoT_Use.jpg",
       technologies: ["React", "TypeScript", "Leaflet.js", "Socket.IO", "Spring Boot", "MongoDB", "Redis", "Docker"],
       github: "https://github.com/captainprice99/VoyageWatch",
       featured: true

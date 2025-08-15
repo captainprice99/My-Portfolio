@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="mx-auto relative w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] rainbow-ring">
             <div className="absolute inset-[12px] rounded-full overflow-hidden bg-slate-900 z-10">
               <Image
-                src="/IMG_7763.jpeg"
+                src="/IMG_7763.JPEG"
                 alt="Arnav Doshi profile picture"
                 fill
                 sizes="(max-width: 640px) 20rem, (max-width: 768px) 24rem, 28rem"
