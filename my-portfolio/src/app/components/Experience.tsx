@@ -16,8 +16,11 @@ const Experience = () => {
       company: "Calero",
       location: "Rochester, NY",
       period: "Sep 2025 – Dec 2025",
-      description:
-        "Joining Calero this fall to build full‑stack features: C#/.NET services on the backend, React on the frontend, and Azure cloud services. Contributing within agile ceremonies and shipping production‑grade code.",
+      points: [
+        "Build full‑stack features across C#/.NET services (backend) and React (frontend)",
+        "Leverage Azure cloud services; contribute within agile ceremonies",
+        "Ship production‑grade code with code reviews and CI/CD"
+      ],
       skills: ["C#", ".NET", "React", "Azure", "Agile"],
       isPlaceholder: false
     },
@@ -26,8 +29,16 @@ const Experience = () => {
       company: "Bristol Myers Squibb (Translational Medicine & Semantic Data Products Team)",
       location: "Lawrenceville, NJ",
       period: "Jun 2025 – Aug 2025",
-      description:
-        "Built a clinical trial analytics dashboard (20M+ entries, 30+ SEND datasets) using Spotfire, AWS Athena, PostgreSQL, and Python; shipped an automated data access tool with JS SDKs and custom MCP servers integrated with GPT‑4.1; owned unit tests and LLM prompt eval in SDLC using AWS Lambda/CloudWatch and pytest.",
+      points: [
+        { text: "Built clinical trial analytics dashboard (20M+ entries, 30+ SEND) with Spotfire, AWS Athena, PostgreSQL, Python", subs: [
+          "Partnered with stakeholders to iteratively refine KPIs, filters, and UX"
+        ]},
+        { text: "Production LLM prompt for database profiling automated access provisioning; saves 5+ hrs/week of manual approvals", subs: [
+          "Reduced consumer access wait time from hours to <5 minutes"
+        ]},
+        "Shipped automated data access tool (JS SDKs + custom MCP servers, GPT‑4.1) used by 15,000+ employees",
+        "Owned unit tests and LLM prompt evaluation in SDLC (AWS Lambda, CloudWatch, pytest)"
+      ],
       skills: ["Spotfire", "AWS Athena", "PostgreSQL", "Python", "AWS Lambda", "CloudWatch", "Pytest", "GPT-4.1", "MCP"],
       isPlaceholder: false
     },
@@ -36,8 +47,12 @@ const Experience = () => {
       company: "Campus Coders Crew",
       location: "College Park, MD",
       period: "Feb 2025 – Present",
-      description:
-        "Led full‑stack builds for 10+ student orgs supporting 8,000+ students. Coordinated agile workflows for 70+ developers across 9 teams; standardized PRs and lifecycles. Delivered MERN apps on AWS/MongoDB Atlas with resilient REST APIs.",
+      points: [
+        "Led full‑stack builds for 10+ orgs supporting 8,000+ students",
+        "Coordinated agile workflows for 70+ developers across 9 teams",
+        "Standardized PRs, branching, and release lifecycles",
+        "Delivered MERN apps on AWS/MongoDB Atlas with resilient REST APIs"
+      ],
       skills: ["React", "Node.js", "Express", "MongoDB Atlas", "AWS", "REST APIs", "Agile"],
       isPlaceholder: false
     },
@@ -46,8 +61,11 @@ const Experience = () => {
       company: "University of Maryland Department of Computer Science",
       location: "College Park, MD",
       period: "Aug 2024 – Dec 2024",
-      description:
-        "Mentored students in office hours; evaluated exams/coursework with detailed feedback; proctored quizzes/exams while upholding academic integrity.",
+      points: [
+        "Mentored students in office hours (concepts, debugging, project guidance)",
+        "Evaluated exams and coursework with detailed feedback",
+        "Proctored quizzes/exams; upheld academic integrity"
+      ],
       skills: ["Mentorship", "Teaching", "Assessment", "Communication"],
       isPlaceholder: false
     },
@@ -56,8 +74,11 @@ const Experience = () => {
       company: "Sensable Inc.",
       location: "Baltimore, MD",
       period: "Jun 2024 – Aug 2024",
-      description:
-        "Architected CI/CD with Jenkins + Kubernetes for mobile app deployments; designed CNN/LSTM models for physiological signals (+26% accuracy over baseline); optimized MySQL schemas to cut query time 30% and 2x throughput.",
+      points: [
+        "Architected CI/CD with Jenkins + Kubernetes for mobile deployments",
+        "Designed CNN/LSTM for physiological signals (+26% accuracy vs baseline)",
+        "Optimized MySQL schemas: −30% query time, 2× throughput"
+      ],
       skills: ["Jenkins", "Kubernetes", "CNN", "LSTM", "Python", "MySQL", "Data Engineering"],
       isPlaceholder: false
     },
@@ -66,8 +87,12 @@ const Experience = () => {
       company: "Bill Fagan Lab",
       location: "College Park, MD",
       period: "Jan 2024 – May 2024",
-      description:
-        "Analyzed antelope heart‑rate datasets in Python/Pandas; detected and mitigated biologger errors to improve data accuracy by 32%. Built multithreaded NumPy parsers (+125% parsing speed). Collaborated with Dr. William Fagan using Jupyter for analysis/visualization.",
+      points: [
+        "Analyzed antelope heart‑rate datasets with Python/Pandas",
+        "Detected/mitigated biologger errors → +32% data accuracy",
+        "Built multithreaded NumPy parsers → +125% parsing speed",
+        "Collaborated with Dr. William Fagan using Jupyter notebooks"
+      ],
       skills: ["Python", "Pandas", "NumPy", "Multithreading", "Jupyter"],
       isPlaceholder: false
     },
@@ -76,8 +101,11 @@ const Experience = () => {
       company: "T20 Prep",
       location: "Edison, NJ (Remote)",
       period: "Oct 2023 – Dec 2023; Aug 2024 – Present",
-      description:
-        "Taught introductory Java to high school students; guided project development and exam preparation in a remote setting.",
+      points: [
+        "Taught introductory Java to high school students (remote)",
+        "Guided project development and exam preparation",
+        "Created supportive learning environment and resources"
+      ],
       skills: ["Java", "Instruction", "Curriculum", "Remote Teaching"],
       isPlaceholder: false
     }
@@ -198,9 +226,20 @@ const Experience = () => {
                       </div>
                     </div>
 
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {exp.description}
-                    </p>
+                    <ul className="text-gray-300 mb-4 leading-relaxed list-disc pl-5 space-y-1">
+                      {(exp as any).points.map((pt: any, i: number) => (
+                        <li key={i}>
+                          {typeof pt === 'string' ? pt : pt.text}
+                          {pt.subs && Array.isArray(pt.subs) && pt.subs.length > 0 && (
+                            <ul className="list-disc pl-5 mt-1 space-y-1 text-gray-400">
+                              {pt.subs.map((sub: string, j: number) => (
+                                <li key={j}>{sub}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
 
                     <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill) => (

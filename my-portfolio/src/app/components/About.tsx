@@ -33,15 +33,20 @@ const About = () => {
             className="space-y-8"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              I'm Arnav Doshi, a Computer Science student at the University of Maryland (Minor in General Business),
-              GPA 3.9/4.0, Dean’s List 4x, and CS Honors. I love turning complex problems into clean, high-impact
-              software across full‑stack, ML/AI, and cloud.
+              Hey there! I'm Arnav Doshi, an undergraduate student at the University of Maryland studying computer science and business. 
+              I love solving complex problems with clean, high-impact software across full‑stack, ML/AI, and cloud.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              Experience includes Bristol Myers Squibb (Enterprise IT, Semantic Data Products), Software Engineer Lead at
-              Campus Coders Crew (supporting 8,000+ students), and a Data Science/ML Internship at Sensable Inc. I work with
-              React/Next.js, TypeScript, Python, Java, Node/Express, Docker, and AWS/GCP/Azure to deliver scalable products.
+              My voyage across the tech world started when I was young. As a kid, I was fascinated by computers, leading me to 
+              build my own and develop my first projects through Scratch and Weebly. Throughout these past few years, I've had
+              the privilege of taking part in amazing technolgoical endeavors in and out the classroom. 
+              </p>
+
+              <p className="text-lg text-gray-300 leading-relaxed">
+              Some of my most recent experience includes interning at Bristol Myers Squibb (Enterprise IT, Semantic Data Products), 
+              working as a lead software engineer at Campus Coders Crew (supporting 8,000+ students), and a Data Science/ML Internship at Sensable Inc. 
+              I work with React/Next.js, TypeScript, Python, Java, Node/Express, Docker, and AWS/GCP/Azure to deliver scalable, impactful products.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-8">
@@ -70,17 +75,17 @@ const About = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
+            className="relative flex justify-center lg:items-center"
           >
-            <div className="relative z-10 bg-gradient-to-br from-purple-600/10 to-pink-600/10 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8">
-              <div className="relative w-full h-80 rounded-xl overflow-hidden">
+            <div className="relative z-10 bg-gradient-to-br from-purple-600/10 to-pink-600/10 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6 sm:p-8 transform will-change-transform lg:-translate-y-6 xl:-translate-y-10">
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4] w-[18rem] sm:w-[22rem] md:w-[26rem] lg:w-[28rem] mx-auto">
                 <Image
                   src="/wwebpic.jpg"
                   alt="Arnav Doshi"
                   fill
                   priority
                   className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 80vw, 40vw"
                 />
               </div>
             </div>
@@ -89,7 +94,7 @@ const About = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 3 }}
-              className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-2xl"
+              className="absolute -top-8 -right-6 lg:-top-10 lg:-right-8 w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-2xl"
             >
               💡
             </motion.div>
