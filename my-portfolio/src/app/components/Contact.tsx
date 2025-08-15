@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -203,16 +203,6 @@ const Contact = () => {
                   <div>
                     <p className="text-gray-300">Email</p>
                     <p className="text-white font-semibold">adoshi14@terpmail.umd.edu</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
-                    <FaPhone className="text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-300">Phone</p>
-                    <p className="text-white font-semibold">(732) 824-2022</p>
                   </div>
                 </div>
 
