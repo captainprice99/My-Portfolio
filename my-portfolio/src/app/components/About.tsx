@@ -40,7 +40,7 @@ const About = () => {
             <p className="text-lg text-gray-300 leading-relaxed">
               My voyage across the tech world started when I was young. As a kid, I was fascinated by computers, leading me to 
               build my own and develop my first projects through Scratch and Weebly. Throughout these past few years, I've had
-              the privilege of taking part in amazing technolgoical endeavors in and out the classroom. 
+              the privilege of taking part in amazing technological endeavors in and out the classroom. 
               </p>
 
               <p className="text-lg text-gray-300 leading-relaxed">

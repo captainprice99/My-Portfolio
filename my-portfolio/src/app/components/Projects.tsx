@@ -12,6 +12,41 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "BotCatcher – Social Media Bot Detection",
+      description:
+        "Built an AI system that flags coordinated bot networks with 98.35% accuracy, leveraging graph learning to capture behavioral patterns — improving trust and safety for large social platforms.",
+      image: "/botprojimage.jpg",
+      technologies: [
+        "Python",
+        "PyTorch Geometric",
+        "Pandas",
+        "NumPy",
+        "scikit-learn",
+        "Matplotlib"
+      ],
+      github: "https://github.com/captainprice99/Detecting-Social-Media-Bots-via-Reinforcement-Learning",
+      featured: false
+    },
+    {
+      title: "FlightLens",
+      description:
+        "Launched a flight‑intelligence platform that reveals how conflicts reshape global air traffic — from live detours and delays to density heatmaps and CO2 impact — enabling faster operational decisions for disruptions.",
+      image: "/planeprojimage.jpg",
+      technologies: [
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "Supabase",
+        "PostGIS",
+        "OpenSky API",
+        "Mapbox GL JS",
+        "React Query",
+        "Zustand"
+      ],
+      github: "https://github.com/captainprice99/geo-divert-lens",
+      featured: false
+    },
+    {
       title: "Personal Portfolio Website",
       description:
         "This site: a vibrant single‑page portfolio built with Next.js 15, Tailwind CSS, Framer Motion animations, and tsparticles background. Smooth scroll navigation, responsive layout, EmailJS contact form, and deployed on Vercel.",
@@ -101,13 +136,13 @@ const Projects = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`group relative ${project.title === 'The Dog App' ? 'md:col-span-2 md:justify-self-center' : ''}`}
+              className={`group relative`}
             >
               <motion.div
                 whileHover={{ y: -10 }}
                 className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 ${
                   project.featured ? 'ring-2 ring-purple-500/20' : ''
-                } ${project.title === 'The Dog App' ? 'md:max-w-2xl md:mx-auto' : ''}`}
+                }`}
               >
                 {project.featured && (
                   <div className="absolute top-4 right-4 z-10">
@@ -125,7 +160,7 @@ const Projects = () => {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                    priority={project.title === 'The Dog App'}
+                    priority={false}
                   />
                   <motion.div
                     className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4"

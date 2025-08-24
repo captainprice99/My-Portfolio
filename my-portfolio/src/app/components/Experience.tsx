@@ -31,13 +31,18 @@ const Experience = () => {
       period: "Jun 2025 – Aug 2025",
       points: [
         { text: "Built clinical trial analytics dashboard (20M+ entries, 30+ SEND) with Spotfire, AWS Athena, PostgreSQL, Python", subs: [
+          "Accelerated drug development for 70+ scientists",
           "Partnered with stakeholders to iteratively refine KPIs, filters, and UX"
         ]},
-        { text: "Production LLM prompt for database profiling automated access provisioning; saves 5+ hrs/week of manual approvals", subs: [
+        { text: "Wrote LLM prompts for database auto access provisioning; saves 5+ hrs/week of manual approvals", subs: [
           "Reduced consumer access wait time from hours to <5 minutes"
         ]},
-        "Shipped automated data access tool (JS SDKs + custom MCP servers, GPT‑4.1) used by 15,000+ employees",
-        "Owned unit tests and LLM prompt evaluation in SDLC (AWS Lambda, CloudWatch, pytest)"
+        "Shipped automated data access tool (JS SDKs + custom MCP servers, GPT‑4.1) used by 15,000+ employees for daily tasks",
+        {
+          text: "Conducted unit testing and LLM prompt evaluation as part of SDLCs (AWS Lambda, CloudWatch, pytest)", subs: [
+            "Ensured streamlined data access for 2000+ internal users"
+          ]
+        }
       ],
       skills: ["Spotfire", "AWS Athena", "PostgreSQL", "Python", "AWS Lambda", "CloudWatch", "Pytest", "GPT-4.1", "MCP"],
       isPlaceholder: false

@@ -11,6 +11,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
+import PlanetsRowBackground from './components/PlanetsRowBackground';
 
 export default function Home() {
   const [particlesReady, setParticlesReady] = useState(false);
@@ -23,6 +24,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden">
+      {/* SVG planets row background (behind particles) */}
+      <PlanetsRowBackground />
       {particlesReady && (
       <Particles
         id="tsparticles"
